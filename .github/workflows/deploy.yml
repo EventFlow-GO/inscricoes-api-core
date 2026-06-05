@@ -29,7 +29,7 @@ jobs:
           aws_access_key: ${{ secrets.ACESSKEY_PUBLIC_AWS }}
           aws_secret_key: ${{ secrets.ACESSKEY_SECRET_AWS }}
           application_name: EventFlowgGO
-          environment_name: EventFlowgGo-env # Confirme se esse é o nome exato do ambiente na AWS
+          environment_name: EventFlowgGo-env 
           version_label: "versao-${{ github.run_number }}"
           region: us-east-1
           deployment_package: target/EventFlowGO-0.0.1-SNAPSHOT.jar
