@@ -4,6 +4,32 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 
+### Sensitive / Environment Files ###
+.env
+.env.*
+!.env.example
+*.local
+
+# Credentials, keys and secrets
+*.pem
+*.key
+*.p12
+*.jks
+*.keystore
+secrets.properties
+application-secret.properties
+application-secrets.properties
+application-local.properties
+*.crt
+
+### Logs ###
+*.log
+logs/
+
+### OS generated files ###
+.DS_Store
+Thumbs.db
+
 ### STS ###
 .apt_generated
 .classpath
