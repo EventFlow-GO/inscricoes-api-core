@@ -28,7 +28,7 @@ jobs:
         with:
           aws_access_key: ${{ secrets.ACESSKEY_PUBLIC_AWS }}
           aws_secret_key: ${{ secrets.ACESSKEY_SECRET_AWS }}
-          application_name: EventFlowgGO
+          application_name: EventFlowgGo
           environment_name: EventFlowgGo-env 
           version_label: "versao-${{ github.run_number }}"
           region: us-east-1

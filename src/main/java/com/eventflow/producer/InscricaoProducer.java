@@ -23,7 +23,8 @@ public class InscricaoProducer {
         InscricaoMessage message = new InscricaoMessage(
                 inscricao.getId(),
                 inscricao.getNome(),
-                inscricao.getEmail()
+                inscricao.getEmail(),
+                inscricao.getSenha()
         );
 
         sqsTemplate.send(to -> to
