@@ -13,7 +13,6 @@ public class InscricaoService {
     private final InscricaoRepository repository;
     private final InscricaoProducer producer;
 
-    // Injeção de dependência via construtor
     public InscricaoService(InscricaoRepository repository, InscricaoProducer producer) {
         this.repository = repository;
         this.producer = producer;
@@ -29,8 +28,8 @@ public class InscricaoService {
 
         InscricaoModel inscricaoSalva = repository.save(novaInscricao);
 
-        // Publica a mensagem na Fila
-        producer.enviarIncricao(request);
+        // Publica a mensagem na Fila com o ID gerado
+        producer.enviarIncricao(inscricaoSalva);
 
         return inscricaoSalva;
     }
